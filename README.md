@@ -35,18 +35,28 @@ Hardware – PCs, Cyclone II , USB flasher
 
 /* Program to implement the given logic function and to verify its operations in quartus using Verilog programming. 
 
-Developed by:M.K.Suriya prakash  RegisterNumber:24901016
+Developed by:Pooja Priya.B  RegisterNumber:24001090
 
 module exp22(A,B,C,D,F1);
+
 input A,B,C,D;
+
 output F1;
+
 wire x1,x2,x3,x4,x5;
+
 assign x1=(~A)&(~B)&(~C)&(~D);
+
 assign x2=(A)&(~C)&(~D);
+
 assign x3=(~B)&(C)&(~D);
+
 assign x4=(~A)&(B)&(C)&(D);
+
 assign x5=(B)&(~C)&(D);
+
 assign F1=x1|x2|x3|x4|x5;
+
 endmodule
 
 
