@@ -35,25 +35,35 @@ Hardware – PCs, Cyclone II , USB flasher
 
 /* Program to implement the given logic function and to verify its operations in quartus using Verilog programming. 
 
-Developed by:vishvanandh
+Developed by:M.K.Suriya prakash  RegisterNumber:24901016
 
-RegisterNumber:*/24005857
+module exp22(A,B,C,D,F1);
+input A,B,C,D;
+output F1;
+wire x1,x2,x3,x4,x5;
+assign x1=(~A)&(~B)&(~C)&(~D);
+assign x2=(A)&(~C)&(~D);
+assign x3=(~B)&(C)&(~D);
+assign x4=(~A)&(B)&(C)&(D);
+assign x5=(B)&(~C)&(D);
+assign F1=x1|x2|x3|x4|x5;
+endmodule
 
 
 **RTL realization**
 
-![WhatsApp Image 2024-12-14 at 21 11 33_f8abda62](https://github.com/user-attachments/assets/183181c4-46b8-43e3-aa9e-a2733d19f59d)
+![image](https://github.com/user-attachments/assets/a1083994-b94d-4043-a854-00f6d3e611ac)
 
-**Output:**
-![WhatsApp Image 2024-12-14 at 21 11 34_c39724ea](https://github.com/user-attachments/assets/c3f2f551-c41b-493b-a5a1-56f0e10adf48)
 
-**RTL**
-![WhatsApp Image 2024-12-14 at 21 11 34_7b847627](https://github.com/user-attachments/assets/9166b7f8-fa03-459c-9cdc-98bde65a3377)
+**Truth table**
 
-**Timing Diagram**
-![WhatsApp Image 2024-12-14 at 21 11 34_4e921b9b](https://github.com/user-attachments/assets/753ca719-68b9-4a44-a124-f190ee8153ae)
+![313054208-ee2fd841-7a98-4ded-9637-76f31327d8b3](https://github.com/user-attachments/assets/5bd6ae88-7ee3-4a24-9e86-f9559cccd124)
+
+
+**Waveform**
+
+![313054423-bce7ad1d-dd00-451f-b1b0-8797ea332973](https://github.com/user-attachments/assets/94d330d2-ce42-4172-9f18-984c6d28693a)
 
 **Result:**
 
-Thus the given logic functions are implemented using and their operations are verified using Verilog programming.
-
+Thus the given logic functions are implemented using and their operations are verified using Verilog programming.
