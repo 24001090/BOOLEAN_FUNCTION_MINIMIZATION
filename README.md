@@ -36,45 +36,70 @@ Hardware – PCs, Cyclone II , USB flasher
 
 /* Program to implement the given logic function and to verify its operations in quartus using Verilog programming. 
 
-Developed by:Pooja Priya.B  RegisterNumber:24001090
+Developed by: Pooja Priya.B RegisterNumber: 24001090 */
 
-module exp22(A,B,C,D,F1);
+```
+module de2(a,b,c,d,w,x,y,z,f1,f2);
 
-input A,B,C,D;
+input a,b,c,d,w,x,y,z;
 
-output F1;
+output f1,f2;
 
-wire x1,x2,x3,x4,x5;
+wire m,n,o,p,q,r,s,t,u,k1,k2,k3,k4,k5,k6,k7,k8,k9;
 
-assign x1=(~A)&(~B)&(~C)&(~D);
+not(m,a);
 
-assign x2=(A)&(~C)&(~D);
+not(n,b);
 
-assign x3=(~B)&(C)&(~D);
+not(o,c);
 
-assign x4=(~A)&(B)&(C)&(D);
+not(p,d);
 
-assign x5=(B)&(~C)&(D);
+and(q,m,n,o,p);
 
-assign F1=x1|x2|x3|x4|x5;
+and(r,a,o,p);
+
+and(s,n,c,p);
+
+and(t,m,b,c,d);
+
+and(u,b,o,d);
+
+or(f1,q,r,s,t,u);
+
+not(k1,w);
+
+not(k2,x);
+
+not(k3,y);
+
+not(k4,z);
+
+and(k5,x,k3,z);
+
+and(k6,k2,k3,z);
+
+and(k7,k1,x,y);
+
+and(k8,w,k2,y);
+
+and(k9,w,x,y);
+
+or(f2,k5,k6,k7,k8,k9);
 
 endmodule
 
-
+```
 **RTL realization**
+![Screenshot 2024-12-21 133520](https://github.com/user-attachments/assets/51a27ae6-e5a9-4c3c-8596-87485a5caab0)
 
-![image](https://github.com/user-attachments/assets/a1083994-b94d-4043-a854-00f6d3e611ac)
-
-
-**Truth table**
-
-![313054208-ee2fd841-7a98-4ded-9637-76f31327d8b3](https://github.com/user-attachments/assets/5bd6ae88-7ee3-4a24-9e86-f9559cccd124)
+**Logic symbol & Truth Table**
+![Screenshot 2024-12-21 133606](https://github.com/user-attachments/assets/f6e945e5-ba9a-490a-9aa3-c8edb66e3558)
 
 
-**Waveform**
-
-![313054423-bce7ad1d-dd00-451f-b1b0-8797ea332973](https://github.com/user-attachments/assets/94d330d2-ce42-4172-9f18-984c6d28693a)
+**Timing Diagram**
+![Screenshot 2024-12-21 135912](https://github.com/user-attachments/assets/edc52ebb-f406-42d6-9a70-7b63bf0151a0)
 
 **Result:**
 
-Thus the given logic functions are implemented using and their operations are verified using Verilog programming.
+Thus the given logic functions are implemented using and their operations are verified using Verilog programming.
